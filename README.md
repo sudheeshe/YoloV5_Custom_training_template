@@ -121,7 +121,7 @@
 ![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/imgs/ssh_password.png?raw=true) 
 
 - Password will be sent to the registered email id
-- Click on `connect` and copy the ssh command and past on MobiXterm terminal and press enter. 
+- Go to created VM and click on `connect` and copy the ssh command and past on MobiXterm terminal and press enter. 
 - While establishing connection to VM using MobiXterm it will prompt for password.
 provide the password over there.
 
