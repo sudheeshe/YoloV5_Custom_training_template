@@ -10,7 +10,7 @@
 - Test folder not need labels, since we are using test images for prediction
 - Note: Ignore on `labels.cache` file it generated during previous training
 
-![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/data_structure_template.png?raw=true)
+![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/imgs/data_structure_template.png?raw=true)
 
 
 ### Create .zip file with for training 
@@ -40,14 +40,14 @@
   - cd /home/sudheeshe/.ssh
   ```
   
-  ![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/ssh_keygen.png?raw=true)
+  ![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/imgs/ssh_keygen.png?raw=true)
   
   - Print out your public key with
   ```bash
   cat ~/.ssh/id_rsa.pub
   ```
 
- ![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/show_ssh_key.png?raw=true)
+ ![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/imgs/show_ssh_key.png?raw=true)
  
 - copy the above ssh key.
 
@@ -55,15 +55,15 @@
  
 - Select `Core virtual servers`
 
-![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/1_.png?raw=true)
+![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/imgs/1_.png?raw=true)
   
 - Select `create a machine` from that select `ML-in-a-box-Ubuntu 20.4` version
   
-![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/2_.png?raw=true)
+![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/imgs/2_.png?raw=true)
  
 - Select GPU as P4000
 
-![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/3_.png?raw=true)
+![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/imgs/3_.png?raw=true)
  
 - Add SSH key if ssh was not added previously. If ssh key is already added and we need to rewrite the existing ssh key you can go with steps mentioned later on this file.
   
@@ -77,17 +77,17 @@
  
 #### step - i
   
-![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/ssh_add_1.png?raw=true)
+![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/imgs/ssh_add_1.png?raw=true)
   
 #### step - ii
   
-![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/ssh_add_2.png?raw=true)
+![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/imgs/ssh_add_2.png?raw=true)
 
 - Yellowline shows previously added ssh keys, with the ssh key name
   
 #### step - iii
  
-![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/ssh_add_3.png?raw=true)
+![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/imgs/ssh_add_3.png?raw=true)
 
 - paste the copied ssh key from MobaXterm here
 
@@ -96,23 +96,23 @@
 - Start the machine we created
 - Once the VM is started we can initialize the connection by using ssh, Click on connet button
   
-![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/4_.png?raw=true)
+![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/imgs/4_.png?raw=true)
   
 - This generates the pop-up with ssh command, which we need to copy and paste it on MobaXterm to initiate the connection
   
-![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/5_.png?raw=true)
+![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/imgs/5_.png?raw=true)
   
 - Now open a new terminal on MobaXterm
   
-![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/6_.png?raw=true)  
+![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/imgs/6_.png?raw=true)  
   
 - Paste the ssh commad on this new terminal and press enter to make the connection with paperspace VM
 
-![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/7_.png?raw=true) 
+![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/imgs/7_.png?raw=true) 
   
 - Connection will get established, we can now see the folders in the VM marked in red
  
-![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/8_.png?raw=true) 
+![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/imgs/8_.png?raw=true) 
  
 - We will be using this terminal for code execution.
 
@@ -194,11 +194,11 @@ pip install -qr requirements.txt
 - Since we have already prepared custom_yolov5s.yaml and which is available in zip file.
 - So We are moving the `custom_yolov5s.yaml` to the `models/custom_yolov5s.yaml` location as shown below
 
-![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/custom_yaml.png?raw=true)
+![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/imgs/custom_yaml.png?raw=true)
 
 ### Change the data.yaml file `train and val` locations, `names` name of classes and `nc` number of classes
 
-![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/data_yaml.png?raw=true)
+![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/imgs/data_yaml.png?raw=true)
 
 
 ### Train Custom YOLOv5 Detector
