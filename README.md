@@ -203,6 +203,20 @@ pip install -qr requirements.txt
 
 ### Train Custom YOLOv5 Detector
 
+Here, we are able to pass a number of arguments:
+
+```
+img: define input image size
+batch: determine batch size
+epochs: define the number of training epochs. (Note: often, 3000+ are common here!)
+data: set the path to our yaml file
+cfg: specify our model configuration
+weights: specify a custom path to weights. (Note: you can download weights from the Ultralytics Google Drive folder)
+name: result names
+nosave: only save the final checkpoint
+cache: cache images for faster training
+```
+
 - We can change file location of`data.yml` and `custom_yolov5s.yaml` if needed, 
 - Since we have placed these files inside `yolov5` folder itself, So we can run the below command as it is. We don't need to change the path.
 
