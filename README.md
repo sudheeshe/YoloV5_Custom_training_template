@@ -155,7 +155,7 @@ conda activate <env_name>
 ### Cloning YOLOv5 repo on working folder eg: PCB_Defect_Detection
 
 ```bash
-git clone https://github.com/ultralytics/yolov5`
+git clone https://github.com/ultralytics/yolov5
 
 cd yolov5
 
