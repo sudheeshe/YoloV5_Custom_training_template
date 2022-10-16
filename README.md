@@ -70,8 +70,8 @@
 - Click create button to create the VM
 
  
-  
-### Adding SSH Keys
+### First way to access VM using MobiXterm is  
+### Method - 1 Adding SSH Keys
   
   - You can add SSH keys on the SSH Keys page in the console. Specify a name for the key and copy/paste the output from step 2 of key generation. Once you’ve added a key, you can select it during machine creation to automatically add it to new CORE machines.
  
@@ -115,6 +115,18 @@
 ![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/imgs/8_.png?raw=true) 
  
 - We will be using this terminal for code execution.
+
+### Method - 2 By password
+
+![alt text](https://github.com/sudheeshe/YoloV5_Custom_training_template/blob/main/imgs/ssh_password.png?raw=true) 
+
+- Password will be sent to the registered email id
+- Click on `connect` and copy the ssh command and past on MobiXterm terminal and press enter. 
+- While establishing connection to VM using MobiXterm it will prompt for password.
+provide the password over there.
+
+### Choose Method - 2 over Method - 1, Since VM will ask for password even if you create connection through ssh. 
+
 
 # TRAINING YOLOV5 MODEL 
 
@@ -240,15 +252,15 @@ tensorboard --logdir runs
       1) best weight path (best.pt)
       2) test image path
    
-- We can provide what is the confidence score (threshold)  using `--conf` argument for prediction. whatsever predictions below this will not get generated. Closer to `0 - less threshold` closer to `1 - higher threshold`.
+- We can provide what is the confidence score (threshold)  using `--conf` argument for prediction. whatever predictions below this will not get generated. Closer to `0 - less threshold` closer to `1 - higher threshold`.
 
 
 ```bash
-cd /content/yolov5/
-python detect.py --weights <path>/yolov5/runs/train/yolov5s_results/weights/best.pt --img 416 --conf 0.5 --source <path>/test/images
+cd yolov5
+python detect.py --weights runs/train/yolov5s_results/weights/best.pt --img 416 --conf 0.5 --source test/images
 ```
 
-- Prediction images will be avaiable in <path>/yolov5/runs/detect
+- Prediction images will be available in yolov5/runs/detect
   
 ### Export Trained Weights for Future Inference
   
