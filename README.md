@@ -125,7 +125,7 @@
 - While establishing connection to VM using MobiXterm it will prompt for password.
 provide the password over there.
 
-### Choose Method - 2 over Method - 1, Since VM will ask for password even if you create connection through ssh. 
+### Choose Method - 2 over Method - 1, Since VM will ask for password even if you create connection through ssh when we try to again connect after restart of VM. 
 
 
 # TRAINING YOLOV5 MODEL 
